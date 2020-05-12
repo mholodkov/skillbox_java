@@ -7,10 +7,10 @@ public class EmployeeSalaryComparator implements Comparator<Employee> {
     public int compare(Employee employee, Employee t1) {
         if (employee.getMonthSalary() > t1.getMonthSalary()) {
             return -1;
-        }
-        if (employee.getMonthSalary() < t1.getMonthSalary()) {
+        } else if (employee.getMonthSalary() < t1.getMonthSalary()) {
             return 1;
+        } else {
+            return 0;
         }
-        return 0;
     }
 }

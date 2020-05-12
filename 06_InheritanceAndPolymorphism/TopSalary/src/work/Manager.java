@@ -6,7 +6,7 @@ public class Manager implements Employee{
 
     public Manager(){
         bonus = Company.income * 0.05;
-        salary = Company.managerSalary + Math.round(10000 * Math.random()) * 1.1 + bonus;
+        salary = Company.managerSalary + bonus + Math.round(1000 * Math.random());
     }
 
     @Override
