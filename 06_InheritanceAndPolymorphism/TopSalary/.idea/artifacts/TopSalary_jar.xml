@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TopSalary:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TopSalary_jar</output-path>
+    <root id="archive" name="TopSalary.jar">
+      <element id="module-output" name="TopSalary" />
+    </root>
+  </artifact>
+</component>
