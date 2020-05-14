@@ -1,19 +1,25 @@
 package work;
 
 public class TopManager implements Employee {
-    private double salary;
+    public Company company;
+    public double salary;
 
     public TopManager() {
-        if (Company.income < 10000000) {
-            salary = Math.round(Company.topManagerSalary + Company.topManagerSalary * Math.random());
-        } else {
-            salary = Math.round(Company.topManagerSalary + Company.topManagerSalary * Math.random()) * 2.5;
-        }
+        this.salary = 0;
+        this.company = null;
     }
 
     @Override
-    public double getMonthSalary() {
-        return salary;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
+    @Override
+    public void setMonthSalary(double salary) {
+        this.salary = salary;
+    }
+    @Override
+    public double getMonthSalary(){
+        return salary;
+    }
 }

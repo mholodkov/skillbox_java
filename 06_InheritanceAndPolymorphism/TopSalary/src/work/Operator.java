@@ -1,16 +1,27 @@
 package work;
 
-import java.util.Collections;
+public class Operator implements Employee{
 
-public class Operator implements Employee {
+    public Company company;
     public double salary;
+    public  Operator(){
+        this.salary = 0;
+        this.company = null;
+    }
 
-    public Operator() {
-        salary = Company.operatorSalary + Math.round(1000 * Math.random());
+
+    @Override
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     @Override
-    public double getMonthSalary() {
+    public void setMonthSalary(double salary) {
+        this.salary = salary;
+    }
+    @Override
+    public double getMonthSalary(){
         return salary;
     }
+
 }

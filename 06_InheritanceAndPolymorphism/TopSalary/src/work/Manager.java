@@ -1,16 +1,26 @@
 package work;
 
-public class Manager implements Employee{
-    private double salary ;
-    private double bonus;
+public class Manager implements Employee {
 
-    public Manager(){
-        bonus = Company.income * 0.05;
-        salary = Company.managerSalary + bonus + Math.round(1000 * Math.random());
+    public Company company;
+    public double salary;
+
+    public Manager() {
+        this.salary = 0;
+        this.company = null;
     }
 
     @Override
-    public double getMonthSalary() {
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    @Override
+    public void setMonthSalary(double salary) {
+        this.salary = salary;
+    }
+    @Override
+    public double getMonthSalary(){
         return salary;
     }
 }

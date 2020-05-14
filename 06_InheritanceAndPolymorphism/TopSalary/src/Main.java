@@ -1,11 +1,9 @@
 import work.*;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
 
-        Company tesla = new Company(1000000, 150000, 100000, 45000);
+        Company tesla = new Company(1000000, 150000, 100000, 45000, "Tesla");
         //hire staff
         for (int i = 0; i < 180; i++) {
             tesla.hire(new Operator());
@@ -37,6 +35,7 @@ public class Main {
         //top&low
         tesla.getTopSalaryStaff(10);
         tesla.getLowestSalaryStaff(30);
+
 
     }
 
